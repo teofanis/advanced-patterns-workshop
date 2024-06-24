@@ -1,6 +1,7 @@
 import { it } from "vitest";
 import { Brand } from "../helpers/Brand";
 import { Equal, Expect } from "../helpers/type-utils";
+import { P } from "ts-toolbelt/out/Object/_api";
 
 type PostId = Brand<string, "PostId">;
 type UserId = Brand<string, "UserId">;
@@ -22,7 +23,10 @@ interface Post {
  * You'll need an index signature of some kind - or maybe
  * two!
  */
-const db: Record<string, User | Post> = {};
+const db: {
+  [userId: UserId]: User;
+  [postId: PostId]: Post;
+} = {};
 
 it("Should let you add users and posts to the db by their id", () => {
   const postId = "post_1" as PostId;
