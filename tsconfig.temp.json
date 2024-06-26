@@ -26,6 +26,6 @@
     }
   },
   "include": [
-    "/Users/teofanispapadopulos/dev/total-typescript/advanced-patterns-workshop/src/02-globals/09-adding-to-process-env.problem.ts"
+    "/Users/teofanispapadopulos/dev/total-typescript/advanced-patterns-workshop/src/03-type-predicates-assertion-functions/12-type-predicates-with-filter.problem.ts"
   ]
 }
